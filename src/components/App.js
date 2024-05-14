@@ -34,10 +34,11 @@ const App = () => {
           
         </ul>
         <Routes>
-          <Route path="login" element={<Login handleClick={handleClick} handleOut={handleOut} authenticated={authenticated}/>}/>
-          <Route path="" element={<Login handleClick={handleClick} handleOut={handleOut} authenticated={authenticated}/>}/>
-          <Route path="playground" element={<PrivateRoute component={Playground} authenticated={authenticated}/>}></Route>
-          <Route path="*" element={<Error/>} />
+          {/* <Route to="/" element={<HomePage/>}> */}
+            <Route path="/login" element={<Login handleClick={handleClick} handleOut={handleOut} authenticated={authenticated} />}></Route>
+            <Route path="/playground" element={<PrivateRoute Component={Playground} authenticated={authenticated} />} />
+            <Route path="*" element={<Error/>} />
+            {/* </Route> */}
         </Routes>
         </div>
     </Router>
