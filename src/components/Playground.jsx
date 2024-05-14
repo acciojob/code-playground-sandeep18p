@@ -1,7 +1,9 @@
+import React from 'react'
 
-import React from "react";
-export default function Playground(){
-  return(<>
-   Hi Welcome to Code PlayGround
-  </>);
+const Playground = () => {
+  return (
+    <div>Hi Welcome to Code PlayGround</div>
+  )
 }
+
+export default Playground
