@@ -24,8 +24,9 @@ const App = () => {
  
 
   return (
-    <div className="main-container">
+   
     <Router>
+       <div className="main-container">
       <div>{authenticate ? "Logged in, Now you can enter Playground":"You are not authenticated, Please login first" }</div>
       <ul>
           <li><Link to="/playground">PlayGround</Link></li>
@@ -38,9 +39,9 @@ const App = () => {
           <Route path="playground" element={<PrivateRoute component={Authenticate} authenticate={authenticate}/>}></Route>
           <Route path="*" element={<Error/>} />
         </Routes>
-       
+        </div>
     </Router>
-    </div>
+ 
   )
 }
 
