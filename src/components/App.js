@@ -30,9 +30,11 @@ const App = () => {
       <ul>
           <li><Link to="/playground">PlayGround</Link></li>
           <li><Link to="/login">Login</Link></li>
+          
         </ul>
         <Routes>
           <Route path="login" element={<Login handleClick={handleClick} handleOut={handleOut} authenticate={authenticate}/>}/>
+          <Route path="" element={<Login handleClick={handleClick} handleOut={handleOut} authenticate={authenticate}/>}/>
           <Route path="playground" element={<PrivateRoute component={Authenticate} authenticate={authenticate}/>}></Route>
           <Route path="*" element={<Error/>} />
         </Routes>
