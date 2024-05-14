@@ -4,7 +4,7 @@ import './../styles/App.css';
 import {BrowserRouter as Router, Route, Routes, Link} from "react-router-dom"
 import { useState } from "react";
 import Login from "./Login"
-import Authenticate from "./Authenticate"
+import Playground from "./Playground"
 import PrivateRoute from "./PrivateRoute";
 import Error from "./Error";
 
@@ -36,7 +36,7 @@ const App = () => {
         <Routes>
           <Route path="login" element={<Login handleClick={handleClick} handleOut={handleOut} authenticate={authenticate}/>}/>
           <Route path="" element={<Login handleClick={handleClick} handleOut={handleOut} authenticate={authenticate}/>}/>
-          <Route path="playground" element={<PrivateRoute component={Authenticate} authenticate={authenticate}/>}></Route>
+          <Route path="playground" element={<PrivateRoute component={Playground} authenticate={authenticate}/>}></Route>
           <Route path="*" element={<Error/>} />
         </Routes>
         </div>
