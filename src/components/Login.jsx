@@ -10,8 +10,8 @@ const Login = ({ handleClick, handleOut, authenticate }) => {
                 </>
             ) : (
                 <>
-                    <p>You are not log in, click here below to log In</p>
-                    <button onClick={handleClick}>Login</button>
+                    <p>You are not log in, click here below to Log In</p>
+                    <button onClick={handleClick}>Log In</button>
                 </>
             )}
         </>
