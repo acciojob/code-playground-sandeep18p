@@ -5,7 +5,7 @@ const Login = ({ handleClick, handleOut, authenticate }) => {
         <>
             {authenticate ? (
                 <>
-                    <p>Login</p>
+                    <p>Log Out</p>
                     <button onClick={handleOut}>Log Out</button>
                 </>
             ) : (
