@@ -6,7 +6,7 @@ const Login = ({ handleClick, handleOut, authenticate }) => {
             {authenticate ? (
                 <>
                     <p>Login</p>
-                    <button onClick={handleOut}>Logout</button>
+                    <button onClick={handleOut}>Log Out</button>
                 </>
             ) : (
                 <>
