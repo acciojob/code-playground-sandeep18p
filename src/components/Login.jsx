@@ -1,21 +1,12 @@
-import React from "react";
+import React from 'react'
 
-const Login = ({ handleClick, handleOut, authenticate }) => {
-    return (
-        <>
-            {authenticate ? (
-                <>
-                    <p>Log Out</p>
-                    <button onClick={handleOut}>Log Out</button>
-                </>
-            ) : (
-                <>
-                    <p>You are not log in, click here below to Log In</p>
-                    <button onClick={handleClick}>Log In</button>
-                </>
-            )}
-        </>
-    );
+const Login = ({handleClick,handleOut,authenticate}) => {
+  return (
+    <div>
+        <p>Login</p>
+        <button onClick={()=>{authenticate?handleOut():handleClick()}}>{authenticate?"Log Out":"Log In"}</button>
+    </div>
+  )
 }
 
-export default Login;
+export default Login
