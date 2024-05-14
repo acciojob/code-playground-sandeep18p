@@ -4,7 +4,7 @@ const Login = ({handleClick,handleOut,authenticated}) => {
   return (
     <div>
         <p>Login</p>
-        <button onClick={()=>{authenticated?handleOut():handleClick()}}>{authenticate?"Log Out":"Log In"}</button>
+        <button onClick={()=>{authenticated?handleOut():handleClick()}}>{authenticated?"Log Out":"Log In"}</button>
     </div>
   )
 }
