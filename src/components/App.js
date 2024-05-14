@@ -10,15 +10,15 @@ import Error from "./Error";
 
 
 const App = () => {
-  const [authenticate,setAuthenticate]=useState(false);
+  const [authenticated, setAuthenticated] = useState(false);
 
   const handleClick =()=>{
     console.log("call c")
-   setAuthenticate(true);
+   setAuthenticated(true);
   }
   const handleOut =()=>{
     console.log("call o")
-    setAuthenticate(false);
+    setAuthenticated(false);
 
    }
  
@@ -34,9 +34,9 @@ const App = () => {
           
         </ul>
         <Routes>
-          <Route path="login" element={<Login handleClick={handleClick} handleOut={handleOut} authenticate={authenticate}/>}/>
-          <Route path="" element={<Login handleClick={handleClick} handleOut={handleOut} authenticate={authenticate}/>}/>
-          <Route path="playground" element={<PrivateRoute component={Playground} authenticate={authenticate}/>}></Route>
+          <Route path="login" element={<Login handleClick={handleClick} handleOut={handleOut} authenticated={authenticated}/>}/>
+          <Route path="" element={<Login handleClick={handleClick} handleOut={handleOut} authenticated={authenticated}/>}/>
+          <Route path="playground" element={<PrivateRoute component={Playground} authenticated={authenticated}/>}></Route>
           <Route path="*" element={<Error/>} />
         </Routes>
         </div>

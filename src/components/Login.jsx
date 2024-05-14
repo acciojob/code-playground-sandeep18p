@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Login = ({handleClick,handleOut,authenticate}) => {
+const Login = ({handleClick,handleOut,authenticated}) => {
   return (
     <div>
         <p>Login</p>
-        <button onClick={()=>{authenticate?handleOut():handleClick()}}>{authenticate?"Log Out":"Log In"}</button>
+        <button onClick={()=>{authenticated?handleOut():handleClick()}}>{authenticate?"Log Out":"Log In"}</button>
     </div>
   )
 }

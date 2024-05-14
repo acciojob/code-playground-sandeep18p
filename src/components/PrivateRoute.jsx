@@ -1,10 +1,10 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-const PrivateRoute = ({ component: Component, authenticate }) => {
+const PrivateRoute = ({ component: Component, authenticated }) => {
     return (
         <>
-            {authenticate ? <Component /> : <Navigate to="/login" />}
+            {authenticated ? <Component /> : <Navigate to="/login" />}
         </>
     );
 }
